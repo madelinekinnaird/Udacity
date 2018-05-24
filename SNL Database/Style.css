@@ -1,0 +1,126 @@
+
+
+/*Importing fonts*/
+
+@font-face {
+    font-family: 'onedirectionmedium';
+    src: url('fonts/onedirection-webfont.woff2') format('woff2'),
+         url('fonts/onedirection-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Header*/
+
+.header-container{
+   height: 35%;
+   padding: 0px;
+   margin: 5%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+h1{
+	font-size: 100px;
+	font-weight:normal;
+	font-style:normal;
+	font-family: 'onedirectionmedium', arial, arial;
+	text-shadow: 3px 2px black;	
+	color: #361D10;
+}
+	
+
+/*Grid container and positioning*/
+
+.grid-container {
+	width: 100%;
+	height: 100%;
+	display:flex;
+    align-items: center;
+    justify-content: center;
+  	display:grid;
+  	grid-template-columns: 20% 20% 20%;
+ 	grid-template-rows: 20% 20% 20%;
+  	grid-row-gap: 10%;
+  	grid-column-gap: 10%;
+  	padding: 1%;
+    margin: 1%;
+}
+
+
+/*links*/
+
+
+.club-list{
+	background-color: #A38B5F;
+	border-radius: 5px;
+	border-color: #361D10;
+	width: 100%;
+	height: 100%;
+	font-size: 50px;
+	font-weight:normal;
+	font-style:normal;
+	font-family: 'onedirectionmedium', arial, arial;
+	width:100%;
+	text-align: center;
+	align-content: center;
+}
+
+.club-font{
+	color:#361D10;
+	text-decoration: underline;
+	text-decoration-color:#361D10; 
+}
+
+/*Clubs*/
+
+.club-title{
+	font-size: 80px;
+	font-weight:normal;
+	font-style:normal;
+	font-family: 'onedirectionmedium', arial, arial;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	text-shadow: 3px 2px black;	
+	color: #361D10;
+}
+
+.club-description{
+	
+	font-size: 24px;
+	font-family: 'arial';
+	margin-right: 150px;
+}
+
+.image-container{
+	display: flex;
+   align-items: center;
+   justify-content: center;
+	
+
+	
+}
+.club-image{
+	margin-left: 150px;
+	border: #A38B5F solid 25px;
+	border-radius: 5px;
+	display:inline-block;
+	margin-right:15px;
+	
+}
+
+
+
+.back-home{
+	text-align: center;
+	font-size: 30px;
+	text-shadow: 3px 2px black;	
+	color: #361D10;
+	font-weight:normal;
+	font-style:normal;
+	font-family: 'onedirectionmedium', arial, arial;
+}
+
