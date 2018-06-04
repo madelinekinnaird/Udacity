@@ -15,6 +15,8 @@ the_brand_new_testament = media.Movie("The Brand New Testament", "http://images.
 
 fight_club = media.Movie("Fight Club", "https://vignette.wikia.nocookie.net/filmguide/images/0/07/Fight-club-poster.jpg/revision/latest?cb=20111208111352", "https://www.youtube.com/watch?v=SUXWAEX2jlg")
 
+#list of movies
+
 movies = [about_time, lady_bird, harry_potter, sound_of_music, the_brand_new_testament, fight_club]
 
 fresh_tomatoes.open_movies_page(movies)
