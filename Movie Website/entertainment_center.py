@@ -1,6 +1,8 @@
 import media
 import fresh_tomatoes
 
+#media is class file for movies
+#fresh tomatoes is HTML/CSS stylizing
 
 
 about_time = media.Movie("About Time", "https://www.aceshowbiz.com/images/still/about-time-poster02.jpg", "https://www.youtube.com/watch?v=T7A810duHvw")
