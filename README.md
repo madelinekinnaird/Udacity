@@ -7,3 +7,7 @@ This repository is to store work from all of my Udacity Nanodegrees, including:<
     c. Movie Website (Python/Html/Javascript) <br>
     d. Break Reminder (Python) <br>
     e. Check Profanity (Python) <br>
+<br>
+  2. Data Wrangling with MongoDB
+ <br>
+3. Intro into Data Analytics
