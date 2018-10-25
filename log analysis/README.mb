@@ -1,0 +1,6 @@
+Requirements
+
+Python 3 - The code uses ver 3.6.4
+Vagrant - A virtual environment builder and manager
+VirtualBox - An open source virtualiztion product.
+Git - An open source version control system
