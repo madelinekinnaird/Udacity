@@ -9,6 +9,8 @@ def get_query_results(query):
     """Connects to the database, runs the query passed to it,
     and returns the results"""
     db = psycopg2.connect(database=DBNAME)
+    except psycopg2.DatabaseError, e:
+    print("<error message>")
     c = db.cursor()
     c.execute(query)
     rows = c.fetchall()
@@ -20,7 +22,7 @@ query1 = """
     SELECT articles.title, COUNT(*) AS num
     FROM articles
     JOIN log
-    ON log.path LIKE concat('/article/%', articles.slug)
+    ON log.path = concat('/article/%', articles.slug)
     GROUP BY articles.title
     ORDER BY num DESC
     LIMIT 3;
@@ -33,7 +35,7 @@ query2 = """
     JOIN articles
     ON authors.id = articles.author
     JOIN log
-    ON log.path like concat('/article/%', articles.slug)
+    ON log.path = concat('/article/%', articles.slug)
     GROUP BY authors.name
     ORDER BY num DESC
     LIMIT 3;
@@ -59,26 +61,30 @@ query3 = """
     ORDER BY percent DESC;
 """
 
-requests1 = "What are the most popular articles of all time?"
-requests2 = "Who are the most popular article authors of all time?"
-requests3 = "On which datas more than 1% of the requests led to error?"
+if __name__ == "__main__":
+
+    request1 = "What are the most popular articles of all time?"
+    request2 = "Who are the most popular article authors of all time?"
+    request3 = "On which datas more than 1% of the requests led to error?"
 
 
-results1 = get_query_results(query1)
-results2 = get_query_results(query2)
-results3 = get_query_results(query3)
+    result1 = get_query_results(query1)
+    result2 = get_query_results(query2)
+    result3 = get_query_results(query3)
 
-def print_results(q_list):
-    for i in range(len(q_list)):
-        title = q_list[i][0]
-        res = q_list[i][1]
-        print("\t" + "%s - %d" % (title, res) + " views")
-    print("\n")
+    def print_results(q_list):
+        for i in range(len(q_list)):
+            title = q_list[i][0]
+            res = q_list[i][1]
+            print("\t" + "%s - %d" % (title, res) + " views")
 
 
-print(request1)
-print_results(result1)
-print(request2)
-print_results(result2)
-print(request3)
-print("\t" + result3[0][1] + " - " + str(result3[0][0]) + "%")
+        print("\n")
+
+
+    print(request1)
+    print_results(result1)
+    print(request2)
+    print_results(result2)
+    print(request3)
+    print("\t" + result3[0][1] + " - " + str.format(result3[0][0]) + "%")
